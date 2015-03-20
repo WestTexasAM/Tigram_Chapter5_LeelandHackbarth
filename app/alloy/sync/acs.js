@@ -43,6 +43,7 @@ module.exports.afterModelCreate = function(Model) {
  * is an ACS Photo 
  */
 function processACSPhotos(model, method, options) {
+<<<<<<< HEAD
 	switch (method) {
 		case "create":
 		// include attributes into the params for ACS
@@ -69,4 +70,7 @@ function processACSPhotos(model, method, options) {
 		alert ("Not Implemented Yet");
 		break;
 	}
+=======
+	
+>>>>>>> origin/master
 }
