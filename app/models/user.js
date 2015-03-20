@@ -3,7 +3,7 @@ exports.definition = {
 
 		"adapter": {
 			"type": "acs",
-			"collection_name": "users"
+			"collection_name": "photos"
 		}
 	},
 	
