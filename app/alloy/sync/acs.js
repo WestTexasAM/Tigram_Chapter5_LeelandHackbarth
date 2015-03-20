@@ -13,7 +13,13 @@ function InitAdapter(config) {
 }
 
 function Sync(model, method, opts) {
-	// Will be filled in later!!
+	var object_name = model.config.adapter.collection_name;
+	
+	if (object_name === "photos") {
+		processASCPhotos(model, method, options);
+	} else if (object_name === "users") {
+		processACSUsers(model, method, options);
+	}
 }
 
 var_ = require("alloy/underscore")._;
@@ -32,3 +38,10 @@ module.exports.afterModelCreate = function(Model) {
 	Model.prototype.config.Model = Model;
 	return Model;
 };
+/**
+ * this is a separate handler for when the object being processed
+ * is an ACS Photo 
+ */
+function processACSPhotos(model, method, options) {
+	
+}
